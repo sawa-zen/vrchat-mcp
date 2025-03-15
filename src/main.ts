@@ -3,6 +3,7 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import dotenv from 'dotenv'
 import { VRChatClient } from "./VRChatClient.js"
 import { createFriendsTools } from "./tools/friends.js";
+import { createUsersTools } from "./tools/users.js";
 dotenv.config()
 
 if (!process.env.VRCHAT_USERNAME || !process.env.VRCHAT_PASSWORD) {
@@ -27,24 +28,7 @@ const server = new McpServer({
   version: "0.1.0"
 })
 
-server.tool("get_current_vrchat_user",
-  "Retrieve your own VRChat user information",
-  {}, // No parameters
-  async () => {
-    try {
-      const user = await vrchatClient.getCurrentUser()
-      return {
-        content: [{
-          type: "text",
-          text: JSON.stringify(user, null, 2)
-        }]
-      }
-    } catch (error) {
-      throw new Error('Failed to retrieve current user: ' + error)
-    }
-  }
-)
-
+createUsersTools(server, vrchatClient)
 createFriendsTools(server, vrchatClient)
 
 // Start MCP server
