@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { Configuration, AuthenticationApi, FriendsApi } from 'vrchat'
 import { authenticator } from 'otplib'
-import { wrapper } from 'axios-cookiejar-support'
 
 interface Arguments {
   username: string;
@@ -12,9 +11,9 @@ interface Arguments {
 
 export class VRChatClient {
   constructor({ username, password, potpSecret, email }: Arguments) {
-    this._axiosConfiguration = wrapper(axios.create({
+    this._axiosConfiguration = axios.create({
       headers: { 'User-Agent': `vrc-mcp/0.10 ${email}` },
-    }))
+    })
 
     this._vrchatConfiguration = new Configuration({ username, password })
 
