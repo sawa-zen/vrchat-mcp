@@ -41,6 +41,14 @@ To install the VRChat MCP server, follow these steps:
    VRCHAT_EMAIL=your_email
    ```
 
+## Debugging
+
+To run the server in debug mode, use the following command:
+
+```bash
+npm run inspector
+```
+
 ## Usage
 
 To start the server, run the following command:
