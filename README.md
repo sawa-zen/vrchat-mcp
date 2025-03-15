@@ -1,4 +1,4 @@
-# VRChat Model Context Protocol Server
+# VRChat MCP(Model Context Protocol)
 
 ![eyecatch](./eyecatch.jpg)
 
