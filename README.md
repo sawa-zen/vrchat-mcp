@@ -23,6 +23,14 @@ export VRCHAT_TOTP_SECRET=your_totp_secret
 export VRCHAT_EMAIL=your_email@example.com
 ```
 
+> [!NOTE]
+> #### Obtain your TOTP secret
+> 1. Visit the [VRChat Profile](https://vrchat.com/home/profile) and enable Two-factor authentication.
+> 2. Decode the displayed QR code to get a string like `otpauth://totp/VRChat:your@email.com?secret=XXXXXXXXXXXXXXXXXXX&issuer=VRChat`.
+> 3. Use the `XXXXXXXXXXXXXXXXXXX` part as your TOTP secret.
+>
+> **This method may have security concerns, so proceed with caution.**
+
 Then, run the following command:
 
 ```bash
