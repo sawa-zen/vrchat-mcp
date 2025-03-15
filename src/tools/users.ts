@@ -2,7 +2,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp"
 import { VRChatClient } from "../VRChatClient"
 
 export const createUsersTools = (server: McpServer, vrchatClient: VRChatClient) => {
-  server.tool("get_current_vrchat_user",
+  server.tool("vrchat_get_current_user",
     "Retrieve your own VRChat user information",
     {}, // No parameters
     async () => {

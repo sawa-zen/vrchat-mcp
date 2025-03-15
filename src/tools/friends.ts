@@ -2,7 +2,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp"
 import { VRChatClient } from "../VRChatClient"
 
 export const createFriendsTools = (server: McpServer, vrchatClient: VRChatClient) => {
-  server.tool("get_vrchat_friends",
+  server.tool("vrchat_get_friends",
     "Retrieve a list of VRChat friend information",
     {}, // No parameters
     async () => {
