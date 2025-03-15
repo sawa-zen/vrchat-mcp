@@ -1,7 +1,7 @@
 # VRChat MCP
 
 This project is developing a Model Context Protocol (MCP) server that can retrieve information from the VRChat API.
-The implementation is based on https://github.com/MatthewDailey/figma-mcp.
+The implementation is based on https://github.com/GLips/Figma-Context-MCP.
 
 ## About the User
 The user is a frontend engineer. They can code better than you, but due to time constraints, they are asking for your help. So let's think and create together.
