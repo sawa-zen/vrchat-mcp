@@ -12,56 +12,28 @@ This project is a Model Context Protocol (MCP) server for interacting with the V
 
 The VRChat MCP server provides a way to access VRChat's API endpoints in a structured manner. It supports a wide range of functionalities, including user authentication, retrieving user and friend information, accessing avatar and world data, and more.
 
-## Installation
-
-To install the VRChat MCP server, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/sawa-zen/vrchat-mcp.git
-   cd vrchat-mcp
-   ```
-
-2. Install the dependencies:
-   ```bash
-   npm install && npm run build
-   ```
-
-3. Obtain your TOTP secret:
-   - Visit [VRChat Profile](https://vrchat.com/home/profile) and enable Two-factor authentication.
-   - Decode the displayed QR code to get a string like `otpauth://totp/VRChat:your%40email.com?secret=XXXXXXXXXXXXXXXXXXX&issuer=VRChat`.
-   - Use the `XXXXXXXXXXXXXXXXXXX` part as your TOTP secret.
-   - **Note:** This method may have security concerns, so proceed with caution.
-
-4. Set up your environment variables in a `.env` file:
-   ```
-   VRCHAT_USERNAME=your_username
-   VRCHAT_PASSWORD=your_password
-   VRCHAT_TOTP_SECRET=your_totp_secret
-   VRCHAT_EMAIL=your_email
-   ```
-
-## Debugging
-
-To run the server in debug mode, use the following command:
-
-```bash
-npm run inspector
-```
-
 ## Usage
 
-To start the server, run the following command:
+To start the server, ensure you have the necessary environment variables set:
 
 ```bash
-npm run start
+export VRCHAT_USERNAME=your_username
+export VRCHAT_PASSWORD=your_password
+export VRCHAT_TOTP_SECRET=your_totp_secret
+export VRCHAT_EMAIL=your_email@example.com
+```
+
+Then, run the following command:
+
+```bash
+npx vrchat-mcp
 ```
 
 This will launch the MCP server, allowing you to interact with the VRChat API through the defined tools.
 
 ## Usage with Claude Desktop
 
-To use this MCP server with Claude Desktop, you do not need to run `npm run start`. Instead, add the following configuration to your `claude_desktop_config.json`:
+To use this MCP server with Claude Desktop, you do not need to run `npx vrchat-mcp` manually. Instead, add the following configuration to your `claude_desktop_config.json`:
 
 ```json
 {
