@@ -67,8 +67,8 @@ To use this MCP server with Claude Desktop, you do not need to run `npm run star
 {
   "mcpServers": {
     "vrchat-mcp": {
-      "command": "[[path to node command]]",
-      "args": ["[[path to cloned repository]]/dist/main.js"],
+      "command": "npx",
+      "args": ["vrchat-mcp"],
       "env": {
         "VRCHAT_USERNAME": "your-username",
         "VRCHAT_PASSWORD": "your-password",
@@ -80,7 +80,7 @@ To use this MCP server with Claude Desktop, you do not need to run `npm run star
 }
 ```
 
-Replace `[[path to node command]]` with the path to your Node.js executable and `[[path to cloned repository]]` with the path where you cloned this repository.
+Then, start Claude Desktop as usual. If you have to use nodenv or nvm, you may need to specify the full path to the `npx` command.
 
 ## Supported VRChat APIs
 
