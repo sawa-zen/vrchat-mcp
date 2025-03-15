@@ -1,19 +1,19 @@
 # VRChat MCP
 
-このプロジェクトは VRChat API から VRChat の情報を取得できる Model Context Protocol (MCP) サーバーを開発しています。
-https://github.com/MatthewDailey/figma-mcp を参考に実装しています。
+This project is developing a Model Context Protocol (MCP) server that can retrieve information from the VRChat API.
+The implementation is based on https://github.com/MatthewDailey/figma-mcp.
 
-## ユーザーについて
-ユーザーはフロントエンドエンジニアです。ユーザーはあなたよりもコードはかけますが、時間が無いためあなたにお願いしています。なので一緒に考えて一緒につくりましょう。
+## About the User
+The user is a frontend engineer. They can code better than you, but due to time constraints, they are asking for your help. So let's think and create together.
 
-## 開発の仕方
+## Development Approach
 
-- README を必ず読むこと
-  - 今後サポートしていきたい機能や実装方法が記載されています
-- ドキュメントのリンクを渡されたら browser action を使って必ず読んでください
-- 実装前にテストが書ける場合は書いてください。それを仕様の確認に使います。
+- Be sure to read the README
+  - It contains features and implementation methods that we want to support in the future.
+- If you are given a link to documentation, be sure to read it using the browser action.
+- If possible, write tests before implementation. Use them to verify the specifications.
 
-## 実装するうえでの参考情報
+## Reference Information for Implementation
 
 - VRChat SDK: https://github.com/vrchatapi/vrchatapi-javascript?tab=readme-ov-file
 - VRChat API Documentation: https://vrchatapi.github.io/docs/api/
