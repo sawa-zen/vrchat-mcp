@@ -34,6 +34,7 @@ To install the VRChat MCP server, follow these steps:
    VRCHAT_USERNAME=your_username
    VRCHAT_PASSWORD=your_password
    VRCHAT_TOTP_SECRET=your_totp_secret
+   VRCHAT_EMAIL=your_email
    ```
 
 ## Usage
