@@ -3,7 +3,9 @@ import { VRChatClient } from "../VRChatClient"
 
 export const createFriendsTools = (server: McpServer, vrchatClient: VRChatClient) => {
   server.tool(
-    "vrchat_get_friends", // Name
+    // Name
+    "vrchat_get_friends",
+    // Description
     `Retrieve a list of VRChat friend information. The following information can be retrieved:
     - "bio"
     - "bioLinks"
@@ -24,11 +26,12 @@ export const createFriendsTools = (server: McpServer, vrchatClient: VRChatClient
     - "tags"
     - "userIcon"
     - "location"
-    - "friendKey"`, // Description
+    - "friendKey"`,
     {}, // No parameters
     async () => {
       try {
-        const friends = await vrchatClient.getFriends()
+        const response = await vrchatClient.friendsApi.getFriends(0, undefined, true)
+        const friends = response.data
         return {
           content: [{
             type: "text",

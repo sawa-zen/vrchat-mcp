@@ -1,6 +1,7 @@
 import axios from 'axios'
-import { Configuration, AuthenticationApi, FriendsApi } from 'vrchat'
+import { Configuration, AuthenticationApi, FriendsApi, AvatarsApi } from 'vrchat'
 import { authenticator } from 'otplib'
+import { searchAvatarsParamsType } from './queryParams/avatars';
 
 interface Arguments {
   username: string;
@@ -10,26 +11,25 @@ interface Arguments {
 }
 
 export class VRChatClient {
+  authApi: AuthenticationApi
+  friendsApi: FriendsApi
+  avatarApi: AvatarsApi
   constructor({ username, password, potpSecret, email }: Arguments) {
     this._axiosConfiguration = axios.create({
       headers: { 'User-Agent': `vrc-mcp/0.10 ${email}` },
     })
-
     this._vrchatConfiguration = new Configuration({ username, password })
-
-    this._vrchatAuthApi = new AuthenticationApi(
-      this._vrchatConfiguration,
-      undefined,
-      this._axiosConfiguration
-    )
-
     this._totpSecret = potpSecret
+
+    this.authApi = new AuthenticationApi(this._vrchatConfiguration, undefined, this._axiosConfiguration)
+    this.friendsApi = new FriendsApi(this._vrchatConfiguration, undefined, this._axiosConfiguration)
+    this.avatarApi = new AvatarsApi(this._vrchatConfiguration, undefined, this._axiosConfiguration)
   }
 
   async auth() {
     // Log in using ID and password
     try {
-      await this.getCurrentUser()
+      await this.authApi.getCurrentUser()
     } catch (error) {
       throw new Error('Failed to get current user: ' + error)
     }
@@ -42,29 +42,17 @@ export class VRChatClient {
     }
   }
 
-  async getCurrentUser() {
-    const response = await this._vrchatAuthApi.getCurrentUser()
-    return response.data
-  }
-
-  async getFriends() {
-    const friendApi = new FriendsApi(this._vrchatConfiguration, undefined, this._axiosConfiguration)
-    const response = await friendApi.getFriends(0, undefined, true)
-    return response.data
-  }
-
   // Private
   private _totpSecret: string
   private _axiosConfiguration
   private _vrchatConfiguration
-  private _vrchatAuthApi
 
   private async _verify2FA() {
     const totpCode = authenticator.generate(this._totpSecret)
-    const response = await this._vrchatAuthApi.verify2FA({ code: totpCode });
+    const response = await this.authApi.verify2FA({ code: totpCode })
     if (!response.data.verified) {
       throw new Error('2FA verification failed')
     }
-    return response.data;
+    return response.data
   }
 }

@@ -5,6 +5,7 @@ import dotenv from 'dotenv'
 import { VRChatClient } from "./VRChatClient.js"
 import { createFriendsTools } from "./tools/friends.js";
 import { createUsersTools } from "./tools/users.js";
+import { createAvatarsTools } from "./tools/avatars.js";
 dotenv.config()
 
 if (!process.env.VRCHAT_USERNAME || !process.env.VRCHAT_PASSWORD) {
@@ -31,6 +32,7 @@ const server = new McpServer({
 
 createUsersTools(server, vrchatClient)
 createFriendsTools(server, vrchatClient)
+createAvatarsTools(server, vrchatClient)
 
 // Start MCP server
 const transport = new StdioServerTransport()
