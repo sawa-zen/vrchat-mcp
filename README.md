@@ -67,77 +67,77 @@ Then, start Claude Desktop as usual. If you have to use nodenv or nvm, you may n
 This is a list of GET endpoints from the VRChat API that our Model Context Protocol server supports or plans to support. Check the boxes as features are implemented.
 
 ### Authentication and User Information
-- [x] Get current user info (GET /auth/user)
-- [ ] Search users (GET /users)
-- [ ] Get specific user profile (GET /users/{userId})
-- [x] Get friends list (GET /auth/user/friends)
-- [ ] Get online friends (GET /auth/user/friends/active)
-- [ ] Get user groups (GET /users/{userId}/groups)
-- [ ] Get player moderations (GET /auth/user/playermoderated)
-- [ ] Get user status (GET /users/{userId}/status)
+- [x] Get current user info
+- [ ] Search users
+- [ ] Get specific user profile
+- [x] Get friends list
+- [ ] Get online friends
+- [ ] Get user groups
+- [ ] Get player moderations
+- [ ] Get user status
 
 ### Avatar Related
-- [ ] Get own avatars (GET /avatars)
-- [ ] Get favorite avatars (GET /avatars/favorites)
-- [ ] Search avatars (GET /avatars/search/{searchQuery})
-- [ ] Get specific avatar details (GET /avatars/{avatarId})
-- [ ] Get public avatars (GET /avatars/public)
+- [ ] Get own avatars
+- [ ] Get favorite avatars
+- [x] Search avatars
+- [ ] Get specific avatar details
+- [ ] Get public avatars
 
 ### World Related
-- [ ] Get worlds list (GET /worlds)
-- [ ] Get active worlds (GET /worlds/active)
-- [ ] Get recently visited worlds (GET /worlds/recent)
-- [ ] Get favorite worlds (GET /worlds/favorites)
-- [ ] Search worlds (GET /worlds/search/{searchQuery})
-- [ ] Get specific world details (GET /worlds/{worldId})
-- [ ] Get world instances (GET /worlds/{worldId}/{instanceId})
-- [ ] Get public worlds (GET /worlds/public)
+- [ ] Get worlds list
+- [ ] Get active worlds
+- [ ] Get recently visited worlds
+- [ ] Get favorite worlds
+- [ ] Search worlds
+- [ ] Get specific world details
+- [ ] Get world instances
+- [ ] Get public worlds
 
 ### Instance Related
-- [ ] Get instance info (GET /instances/{worldId}:{instanceId})
-- [ ] Get instance attendees (GET /instances/{worldId}:{instanceId}/join)
-- [ ] Get instance short name (GET /instances/{worldId}:{instanceId}/shortName)
+- [ ] Get instance info
+- [ ] Get instance attendees
+- [ ] Get instance short name
 
 ### File Related
-- [ ] Get file info (GET /file/{fileId})
-- [ ] Get file download info (GET /file/{fileId}/download)
-- [ ] Get file status (GET /file/{fileId}/status)
+- [ ] Get file info
+- [ ] Get file download info
+- [ ] Get file status
 
 ### Group Related
-- [ ] Get groups list (GET /groups)
-- [ ] Get specific group info (GET /groups/{groupId})
-- [ ] Get group members (GET /groups/{groupId}/members)
-- [ ] Get group permissions (GET /groups/{groupId}/permissions)
-- [ ] Get group requests (GET /groups/{groupId}/requests)
-- [ ] Get group invites (GET /groups/{groupId}/invites)
-- [ ] Get group bans (GET /groups/{groupId}/bans)
-- [ ] Get group galleries (GET /groups/{groupId}/galleries)
-- [ ] Get group owned worlds (GET /groups/{groupId}/worlds)
+- [ ] Get groups list
+- [ ] Get specific group info
+- [ ] Get group members
+- [ ] Get group permissions
+- [ ] Get group requests
+- [ ] Get group invites
+- [ ] Get group bans
+- [ ] Get group galleries
+- [ ] Get group owned worlds
 
 ### Notification Related
-- [ ] Get notifications list (GET /auth/user/notifications)
-- [ ] Get friend requests (GET /user/friendRequests)
-- [ ] Get unread notification count (GET /auth/user/notifications/unreadCount)
+- [ ] Get notifications list
+- [ ] Get friend requests
+- [ ] Get unread notification count
 
 ### Inventory Related
-- [ ] Get license types (GET /licenses)
-- [ ] Get owned licenses (GET /licenses/own)
-- [ ] Get stores list (GET /stores)
+- [ ] Get license types
+- [ ] Get owned licenses
+- [ ] Get stores list
 
 ### System Related
-- [ ] Get API configuration (GET /config)
-- [ ] Get API limits (GET /auth/limits)
-- [ ] Check system health (GET /health)
-- [ ] Get online users count (GET /visits)
-- [ ] Get server announcements (GET /announcements)
+- [ ] Get API configuration
+- [ ] Get API limits
+- [ ] Check system health
+- [ ] Get online users count
+- [ ] Get server announcements
 
 ### Others
-- [ ] Get tags list (GET /tags)
-- [ ] Get favorite info (GET /favorite)
-- [ ] Get invisibles list (GET /auth/user/invisibles)
-- [ ] Get moderations (GET /auth/user/moderations)
-- [ ] Get favorite groups (GET /favorite/groups)
-- [ ] Get favorite group types (GET /favorite/group/types)
+- [ ] Get tags list
+- [ ] Get favorite info
+- [ ] Get invisibles list
+- [ ] Get moderations
+- [ ] Get favorite groups
+- [ ] Get favorite group types
 
 ## Contributing
 
