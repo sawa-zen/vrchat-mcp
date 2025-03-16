@@ -1,11 +1,11 @@
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp"
-import { VRChatClient } from "../VRChatClient"
-import { z } from "zod"
+import { McpServer } from '@modelcontextprotocol/sdk/server/mcp'
+import { VRChatClient } from '../VRChatClient'
+import { z } from 'zod'
 
 export const createFriendsTools = (server: McpServer, vrchatClient: VRChatClient) => {
   server.tool(
     // Name
-    "vrchat_get_friends_list",
+    'vrchat_get_friends_list',
     // Description
     `Retrieve a list of VRChat friend information. The following information can be retrieved:
     - "bio"
@@ -39,7 +39,7 @@ export const createFriendsTools = (server: McpServer, vrchatClient: VRChatClient
         const friends = response.data
         return {
           content: [{
-            type: "text",
+            type: 'text',
             text: JSON.stringify(friends, null, 2)
           }]
         }
