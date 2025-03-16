@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { Configuration, AuthenticationApi, FriendsApi, AvatarsApi } from 'vrchat'
 import { authenticator } from 'otplib'
-import { searchAvatarsParamsType } from './queryParams/avatars';
 
 interface Arguments {
   username: string;
