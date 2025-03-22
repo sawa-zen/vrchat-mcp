@@ -62,9 +62,9 @@ To use this MCP server with Claude Desktop, you do not need to run `npx vrchat-m
 
 Then, start Claude Desktop as usual. If you have to use nodenv or nvm, you may need to specify the full path to the `npx` command.
 
-## Supported VRChat APIs
+## VRChat API Endpoints
 
-This is a list of GET endpoints from the VRChat API that our Model Context Protocol server supports or plans to support. Check the boxes as features are implemented.
+This is a list of endpoints from the VRChat API that our Model Context Protocol server supports or plans to support. Both GET and POST methods are included to provide comprehensive functionality. The checkboxes indicate the implementation status of each endpoint.
 
 ### Authentication and User Information
 - [x] Get current user info
@@ -75,6 +75,13 @@ This is a list of GET endpoints from the VRChat API that our Model Context Proto
 - [ ] Get user groups
 - [ ] Get player moderations
 - [ ] Get user status
+- [ ] Update user info
+- [ ] Update user status
+- [ ] Send friend request
+- [ ] Accept/Deny friend request
+- [ ] Remove friend
+- [ ] Block user
+- [ ] Unblock user
 
 ### Avatar Related
 - [ ] Get own avatars
@@ -82,6 +89,11 @@ This is a list of GET endpoints from the VRChat API that our Model Context Proto
 - [x] Search avatars
 - [ ] Get specific avatar details
 - [ ] Get public avatars
+- [ ] Create avatar
+- [ ] Update avatar
+- [ ] Delete avatar
+- [ ] Select avatar
+- [ ] Favorite/Unfavorite avatar
 
 ### World Related
 - [ ] Get worlds list
@@ -92,11 +104,18 @@ This is a list of GET endpoints from the VRChat API that our Model Context Proto
 - [ ] Get specific world details
 - [ ] Get world instances
 - [ ] Get public worlds
+- [ ] Create world
+- [ ] Update world
+- [ ] Delete world
+- [ ] Favorite/Unfavorite world
 
 ### Instance Related
 - [ ] Get instance info
 - [ ] Get instance attendees
 - [ ] Get instance short name
+- [ ] Join instance
+- [ ] Leave instance
+- [ ] Invite user to instance
 
 ### File Related
 - [ ] Get file info
@@ -113,11 +132,23 @@ This is a list of GET endpoints from the VRChat API that our Model Context Proto
 - [ ] Get group bans
 - [ ] Get group galleries
 - [ ] Get group owned worlds
+- [ ] Create group
+- [ ] Update group
+- [ ] Delete group
+- [ ] Join group
+- [ ] Leave group
+- [ ] Invite user to group
+- [ ] Accept/Deny group invite
+- [ ] Ban user from group
+- [ ] Unban user from group
 
 ### Notification Related
 - [ ] Get notifications list
 - [ ] Get friend requests
 - [ ] Get unread notification count
+- [ ] Mark notification as read
+- [ ] Delete notification
+- [ ] Clear all notifications
 
 ### Inventory Related
 - [ ] Get license types
@@ -138,6 +169,10 @@ This is a list of GET endpoints from the VRChat API that our Model Context Proto
 - [ ] Get moderations
 - [ ] Get favorite groups
 - [ ] Get favorite group types
+- [ ] Create moderation
+- [ ] Delete moderation
+- [ ] Update favorite group
+- [ ] Update favorite group type
 
 ## Contributing
 
