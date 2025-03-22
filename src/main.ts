@@ -6,6 +6,7 @@ import { VRChatClient } from './VRChatClient.js'
 import { createFriendsTools } from './tools/friends.js'
 import { createUsersTools } from './tools/users.js'
 import { createAvatarsTools } from './tools/avatars.js'
+import { createWorldsTools } from './tools/worlds.js'
 dotenv.config()
 
 const vrchatClient = new VRChatClient({
@@ -23,6 +24,7 @@ const server = new McpServer({
 createUsersTools(server, vrchatClient)
 createFriendsTools(server, vrchatClient)
 createAvatarsTools(server, vrchatClient)
+createWorldsTools(server, vrchatClient)
 
 // Start MCP server
 const transport = new StdioServerTransport()
