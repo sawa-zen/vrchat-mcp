@@ -7,6 +7,7 @@ export const createUsersTools = (server: McpServer, vrchatClient: VRChatClient) 
     {}, // No parameters
     async () => {
       try {
+        await vrchatClient.auth()
         const user = await vrchatClient.authApi.getCurrentUser()
         return {
           content: [{

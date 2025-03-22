@@ -25,6 +25,7 @@ export const createAvatarsTools = (server: McpServer, vrchatClient: VRChatClient
     },
     async (params) => {
       try {
+        await vrchatClient.auth()
         const avatars = await vrchatClient.avatarApi.searchAvatars(
           params.featured,
           params.sort,

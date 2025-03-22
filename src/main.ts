@@ -23,7 +23,6 @@ const vrchatClient = new VRChatClient({
   potpSecret: process.env.VRCHAT_TOTP_SECRET,
   email: process.env.VRCHAT_EMAIL
 })
-await vrchatClient.auth()
 
 const server = new McpServer({
   name: 'vrchat-mcp',

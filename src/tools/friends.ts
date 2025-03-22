@@ -35,6 +35,7 @@ export const createFriendsTools = (server: McpServer, vrchatClient: VRChatClient
     },
     async (params) => {
       try {
+        await vrchatClient.auth()
         const response = await vrchatClient.friendsApi.getFriends(
           params.offset || 0,
           params.n || 10,
