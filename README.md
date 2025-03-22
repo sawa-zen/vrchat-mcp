@@ -1,5 +1,7 @@
 # VRChat MCP(Model Context Protocol)
 
+[日本語](./README.ja.md)
+
 ![eyecatch](./eyecatch.jpg)
 
 This project is a Model Context Protocol (MCP) server for interacting with the VRChat API. It allows you to retrieve various information from VRChat using a standardized protocol.
