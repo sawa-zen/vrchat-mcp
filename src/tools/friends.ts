@@ -49,7 +49,12 @@ export const createFriendsTools = (server: McpServer, vrchatClient: VRChatClient
           }]
         }
       } catch (error) {
-        throw new Error('Failed to retrieve friends: ' + error)
+        return {
+          content: [{
+            type: 'text',
+            text: 'Failed to retrieve friends: ' + error
+          }]
+        }
       }
     }
   )

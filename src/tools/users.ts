@@ -16,7 +16,12 @@ export const createUsersTools = (server: McpServer, vrchatClient: VRChatClient) 
           }]
         }
       } catch (error) {
-        throw new Error('Failed to retrieve current user: ' + error)
+        return {
+          content: [{
+            type: 'text',
+            text: 'Failed to retrieve user: ' + error
+          }]
+        }
       }
     }
   )

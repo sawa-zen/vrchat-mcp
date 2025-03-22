@@ -8,20 +8,11 @@ import { createUsersTools } from './tools/users.js'
 import { createAvatarsTools } from './tools/avatars.js'
 dotenv.config()
 
-if (!process.env.VRCHAT_USERNAME || !process.env.VRCHAT_PASSWORD) {
-  throw new Error('VRCHAT_USERNAME and VRCHAT_PASSWORD must be provided')
-}
-if (!process.env.VRCHAT_TOTP_SECRET) {
-  throw new Error('VRCHAT_TOTP_SECRET must be provided')
-}
-if (!process.env.VRCHAT_EMAIL) {
-  throw new Error('VRCHAT_EMAIL must be provided')
-}
 const vrchatClient = new VRChatClient({
-  username: process.env.VRCHAT_USERNAME,
-  password: process.env.VRCHAT_PASSWORD,
-  potpSecret: process.env.VRCHAT_TOTP_SECRET,
-  email: process.env.VRCHAT_EMAIL
+  username: process.env.VRCHAT_USERNAME || '',
+  password: process.env.VRCHAT_PASSWORD || '',
+  potpSecret: process.env.VRCHAT_TOTP_SECRET || '',
+  email: process.env.VRCHAT_EMAIL || ''
 })
 
 const server = new McpServer({

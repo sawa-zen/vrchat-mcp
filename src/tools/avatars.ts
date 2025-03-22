@@ -48,7 +48,12 @@ export const createAvatarsTools = (server: McpServer, vrchatClient: VRChatClient
           }]
         }
       } catch (error) {
-        throw new Error('Failed to search avatars: ' + error)
+        return {
+          content: [{
+            type: 'text',
+            text: 'Failed to search avatars: ' + error
+          }]
+        }
       }
     }
   )
