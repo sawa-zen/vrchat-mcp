@@ -2,8 +2,8 @@ name: NPM Publish
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - 'v*' # vから始まるタグ（v0.1.3, v1.0.0など）
 
 jobs:
   publish:

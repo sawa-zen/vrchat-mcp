@@ -174,6 +174,28 @@ This is a list of endpoints from the VRChat API that our Model Context Protocol 
 - [ ] Update favorite group
 - [ ] Update favorite group type
 
+## Publishing
+
+To publish a new version of the package, use one of the following commands:
+
+```bash
+# For patch version updates (e.g., 0.1.2 → 0.1.3)
+npm run release:patch
+
+# For minor version updates (e.g., 0.1.2 → 0.2.0)
+npm run release:minor
+
+# For major version updates (e.g., 0.1.2 → 1.0.0)
+npm run release:major
+```
+
+When you run these commands, the following actions will be performed:
+1. Update the version in package.json
+2. Create a git commit with the version change
+3. Create a git tag for the version
+4. Push the tag to GitHub
+5. Trigger GitHub Actions to automatically publish to npm
+
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
