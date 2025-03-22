@@ -1,9 +1,37 @@
 {
   "name": "vrchat-mcp",
   "version": "0.1.0",
-  "description": "VRChat MCP Server",
+  "description": "VRChat MCP Server - Access VRChat API through Model Context Protocol",
   "type": "module",
   "main": "dist/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sawa-zen/vrchat-mcp.git"
+  },
+  "homepage": "https://github.com/sawa-zen/vrchat-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/sawa-zen/vrchat-mcp/issues"
+  },
+  "keywords": [
+    "vrchat",
+    "mcp",
+    "model-context-protocol",
+    "api",
+    "claude"
+  ],
+  "author": "sawa-zen",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "vrchat-mcp": "dist/main.js"
   },
