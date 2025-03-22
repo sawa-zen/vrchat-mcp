@@ -12,6 +12,7 @@ The user is a frontend engineer. They can code better than you, but due to time 
   - It contains features and implementation methods that we want to support in the future.
 - If you are given a link to documentation, be sure to read it using the browser action.
 - If possible, write tests before implementation. Use them to verify the specifications.
+- Since this is an OSS project, all documentation including README should be written in English.
 
 ## Reference Information for Implementation
 

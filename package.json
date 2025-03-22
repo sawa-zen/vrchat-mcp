@@ -1,6 +1,6 @@
 {
   "name": "vrchat-mcp",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "VRChat MCP Server - Access VRChat API through Model Context Protocol",
   "type": "module",
   "main": "dist/main.js",
@@ -41,10 +41,7 @@
     "start": "node dist/main.js",
     "inspector": "npx @modelcontextprotocol/inspector node dist/main.js",
     "dev": "tsc -w",
-    "lint": "eslint .",
-    "release:patch": "npm version patch && git push --tags",
-    "release:minor": "npm version minor && git push --tags",
-    "release:major": "npm version major && git push --tags"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.7.0",

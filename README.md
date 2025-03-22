@@ -100,7 +100,7 @@ This is a list of endpoints from the VRChat API that our Model Context Protocol 
 - [ ] Get active worlds
 - [ ] Get recently visited worlds
 - [ ] Get favorite worlds
-- [ ] Search worlds
+- [x] Search worlds
 - [ ] Get specific world details
 - [ ] Get world instances
 - [ ] Get public worlds
@@ -176,25 +176,40 @@ This is a list of endpoints from the VRChat API that our Model Context Protocol 
 
 ## Publishing
 
-To publish a new version of the package, use one of the following commands:
+To publish a new version of the package, follow these steps:
 
-```bash
-# For patch version updates (e.g., 0.1.2 → 0.1.3)
-npm run release:patch
+1. Pull the latest code from the main branch
+   ```bash
+   git checkout main
+   git pull origin main
+   ```
 
-# For minor version updates (e.g., 0.1.2 → 0.2.0)
-npm run release:minor
+2. Update the version as needed
+   ```bash
+   # For patch version updates (e.g., 0.1.2 → 0.1.3)
+   npm version patch
 
-# For major version updates (e.g., 0.1.2 → 1.0.0)
-npm run release:major
-```
+   # For minor version updates (e.g., 0.1.2 → 0.2.0)
+   npm version minor
 
-When you run these commands, the following actions will be performed:
-1. Update the version in package.json
-2. Create a git commit with the version change
-3. Create a git tag for the version
-4. Push the tag to GitHub
-5. Trigger GitHub Actions to automatically publish to npm
+   # For major version updates (e.g., 0.1.2 → 1.0.0)
+   npm version major
+   ```
+
+3. Build the package
+   ```bash
+   npm run build
+   ```
+
+4. Publish to npm
+   ```bash
+   npm publish
+   ```
+
+5. Push changes to the remote repository
+   ```bash
+   git push origin main --tags
+   ```
 
 ## Contributing
 
