@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { Configuration, AuthenticationApi, FriendsApi, AvatarsApi, WorldsApi } from 'vrchat'
+import { Configuration, AuthenticationApi, FriendsApi, AvatarsApi, WorldsApi, InstancesApi } from 'vrchat'
 import { authenticator } from 'otplib'
 
 interface Arguments {
@@ -14,6 +14,7 @@ export class VRChatClient {
   friendsApi: FriendsApi
   avatarApi: AvatarsApi
   worldsApi: WorldsApi
+  instancesApi: InstancesApi
   constructor({ username, password, potpSecret, email }: Arguments) {
     this._axiosConfiguration = axios.create({
       headers: { 'User-Agent': `vrc-mcp/0.10 ${email}` },
@@ -25,6 +26,7 @@ export class VRChatClient {
     this.friendsApi = new FriendsApi(this._vrchatConfiguration, undefined, this._axiosConfiguration)
     this.avatarApi = new AvatarsApi(this._vrchatConfiguration, undefined, this._axiosConfiguration)
     this.worldsApi = new WorldsApi(this._vrchatConfiguration, undefined, this._axiosConfiguration)
+    this.instancesApi = new InstancesApi(this._vrchatConfiguration, undefined, this._axiosConfiguration)
   }
 
   async auth() {

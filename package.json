@@ -1,6 +1,6 @@
 {
   "name": "vrchat-mcp",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "VRChat MCP Server - Access VRChat API through Model Context Protocol",
   "type": "module",
   "main": "dist/main.js",
