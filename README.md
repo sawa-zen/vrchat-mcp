@@ -43,7 +43,10 @@ This will launch the MCP server, allowing you to interact with the VRChat API th
 
 ## Usage with Claude Desktop
 
-To use this MCP server with Claude Desktop, you do not need to run `npx vrchat-mcp` manually. Instead, add the following configuration to your `claude_desktop_config.json`:
+To use this MCP server with Claude Desktop, you do not need to run `npx vrchat-mcp` manually. Instead, add the following configuration to your Claude Desktop config file:
+
+- MacOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 
 ```json
 {
@@ -175,6 +178,27 @@ This is a list of endpoints from the VRChat API that our Model Context Protocol 
 - [ ] Delete moderation
 - [ ] Update favorite group
 - [ ] Update favorite group type
+
+## Debugging
+
+First, build the project:
+
+```bash
+npm install
+npm run build
+```
+
+Since MCP servers run over stdio, debugging can be challenging. For the best debugging experience, we strongly recommend using the MCP Inspector.
+
+You can launch the MCP Inspector via npm with this command:
+
+```bash
+npx @modelcontextprotocol/inspector "./dist/main.js"
+```
+
+Be sure that environment variables are properly configured.
+
+Upon launching, the Inspector will display a URL that you can access in your browser to begin debugging.
 
 ## Publishing
 

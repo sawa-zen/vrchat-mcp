@@ -41,7 +41,10 @@ npx vrchat-mcp
 
 ## Claude Desktopでの使用方法
 
-このMCPサーバーをClaude Desktopで使用する場合、`npx vrchat-mcp`を手動で実行する必要はありません。代わりに、`claude_desktop_config.json`に以下の設定を追加してください：
+このMCPサーバーをClaude Desktopで使用する場合、`npx vrchat-mcp`を手動で実行する必要はありません。代わりに、Claude Desktopの設定ファイルに以下の設定を追加してください：
+
+- MacOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 
 ```json
 {
@@ -173,6 +176,27 @@ npx vrchat-mcp
 - [ ] モデレーションの削除
 - [ ] お気に入りグループの更新
 - [ ] お気に入りグループタイプの更新
+
+## デバッグ
+
+まず、プロジェクトをビルドします：
+
+```bash
+npm install
+npm run build
+```
+
+MCP サーバーは stdio を介して実行されるため、デバッグが難しい場合があります。最適なデバッグ体験のために、MCP Inspector の使用を強く推奨します。
+
+以下のコマンドで npm を通じて MCP Inspector を起動できます：
+
+```bash
+npx @modelcontextprotocol/inspector "./dist/main.js"
+```
+
+環境変数が適切に設定されていることを確認してください。
+
+起動すると、Inspector はブラウザでアクセスできる URL を表示します。この URL にアクセスしてデバッグを開始できます。
 
 ## パッケージの公開
 
