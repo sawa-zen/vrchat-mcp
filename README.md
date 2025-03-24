@@ -129,7 +129,7 @@ This is a list of endpoints from the VRChat API that our Model Context Protocol 
 - [ ] Get file status
 
 ### Group Related
-- [ ] Get groups list
+- [x] Search groups
 - [ ] Get specific group info
 - [ ] Get group members
 - [ ] Get group permissions
