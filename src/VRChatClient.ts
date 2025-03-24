@@ -30,6 +30,8 @@ export class VRChatClient {
   }
 
   async auth() {
+    if (this._authed) return
+
     // Log in using ID and password
     try {
       await this.authApi.getCurrentUser()
@@ -43,12 +45,15 @@ export class VRChatClient {
     } catch (error) {
       throw new Error('2FA verification failed: ' + error)
     }
+
+    this._authed = true
   }
 
   // Private
   private _totpSecret: string
   private _axiosConfiguration
   private _vrchatConfiguration
+  private _authed = false
 
   private async _verify2FA() {
     const totpCode = authenticator.generate(this._totpSecret)
