@@ -13,6 +13,9 @@ The user is a frontend engineer. They can code better than you, but due to time 
 - If you are given a link to documentation, be sure to read it using the browser action.
 - If possible, write tests before implementation. Use them to verify the specifications.
 - Since this is an OSS project, all documentation including README should be written in English.
+- When implementing new tools:
+  - Update the package version (minor version for new features)
+  - Update both README.md and README.ja.md to reflect the new supported features
 
 ## Reference Information for Implementation
 
