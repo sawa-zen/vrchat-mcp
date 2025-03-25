@@ -5,6 +5,35 @@ import { z } from 'zod'
 export const createAvatarsTools = (server: McpServer, vrchatClient: VRChatClient) => {
   server.tool(
     // Name
+    'vrchat_select_avatar',
+    // Description
+    'Select and switch to a specific avatar by its ID.',
+    {
+      avatarId: z.string().describe('The ID of the avatar to select'),
+    },
+    async (params) => {
+      try {
+        await vrchatClient.auth()
+        const response = await vrchatClient.avatarApi.selectAvatar(params.avatarId)
+        return {
+          content: [{
+            type: 'text',
+            text: JSON.stringify(response.data, null, 2)
+          }]
+        }
+      } catch (error) {
+        return {
+          content: [{
+            type: 'text',
+            text: 'Failed to select avatar: ' + error
+          }]
+        }
+      }
+    }
+  )
+
+  server.tool(
+    // Name
     'vrchat_search_avatars',
     // Description
     'Search and list avatars by query filters. You can only search your own or featured avatars. It is not possible as a normal user to search other people\'s avatars.',
@@ -26,7 +55,7 @@ export const createAvatarsTools = (server: McpServer, vrchatClient: VRChatClient
     async (params) => {
       try {
         await vrchatClient.auth()
-        const avatars = await vrchatClient.avatarApi.searchAvatars(
+        const response = await vrchatClient.avatarApi.searchAvatars(
           params.featured,
           params.sort,
           params.user,
@@ -44,7 +73,7 @@ export const createAvatarsTools = (server: McpServer, vrchatClient: VRChatClient
         return {
           content: [{
             type: 'text',
-            text: JSON.stringify(avatars, null, 2)
+            text: JSON.stringify(response.data, null, 2)
           }]
         }
       } catch (error) {

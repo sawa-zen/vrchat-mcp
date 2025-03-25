@@ -97,7 +97,7 @@ This is a list of endpoints from the VRChat API that our Model Context Protocol 
 - [ ] Create avatar
 - [ ] Update avatar
 - [ ] Delete avatar
-- [ ] Select avatar
+- [x] Select avatar
 - [ ] Favorite/Unfavorite avatar
 
 ### World Related
