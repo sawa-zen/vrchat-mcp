@@ -4,6 +4,33 @@ import { z } from 'zod'
 
 export const createGroupsTools = (server: McpServer, vrchatClient: VRChatClient) => {
   server.tool(
+    'vrchat_join_group',
+    'Join a VRChat group by ID',
+    {
+      groupId: z.string().describe('Must be a valid group ID')
+    },
+    async (args) => {
+      try {
+        await vrchatClient.auth()
+        const response = await vrchatClient.groupsApi.joinGroup(args.groupId)
+        return {
+          content: [{
+            type: 'text',
+            text: JSON.stringify(response.data, null, 2)
+          }]
+        }
+      } catch (error) {
+        return {
+          content: [{
+            type: 'text',
+            text: 'Failed to join group: ' + error
+          }]
+        }
+      }
+    }
+  )
+
+  server.tool(
     'vrchat_search_groups',
     'Search VRChat groups by name or shortCode',
     {

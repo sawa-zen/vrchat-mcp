@@ -141,7 +141,7 @@ This is a list of endpoints from the VRChat API that our Model Context Protocol 
 - [ ] Create group
 - [ ] Update group
 - [ ] Delete group
-- [ ] Join group
+- [x] Join group
 - [ ] Leave group
 - [ ] Invite user to group
 - [ ] Accept/Deny group invite
