@@ -75,18 +75,20 @@ This is a list of endpoints from the VRChat API that our Model Context Protocol 
 - [x] Get current user info
 - [ ] Search users
 - [ ] Get specific user profile
-- [x] Get friends list
-- [ ] Get online friends
 - [ ] Get user groups
 - [ ] Get player moderations
 - [ ] Get user status
 - [ ] Update user info
 - [ ] Update user status
-- [ ] Send friend request
-- [ ] Accept/Deny friend request
-- [ ] Remove friend
 - [ ] Block user
 - [ ] Unblock user
+
+### Friend Related
+- [x] Get friends list
+- [ ] Get online friends
+- [x] Send friend request
+- [ ] Accept/Deny friend request
+- [ ] Remove friend
 
 ### Avatar Related
 - [ ] Get own avatars

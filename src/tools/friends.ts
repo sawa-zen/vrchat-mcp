@@ -5,6 +5,35 @@ import { z } from 'zod'
 export const createFriendsTools = (server: McpServer, vrchatClient: VRChatClient) => {
   server.tool(
     // Name
+    'vrchat_send_friend_request',
+    // Description
+    'Send a friend request to another user.',
+    {
+      userId: z.string().min(1),
+    },
+    async (params) => {
+      try {
+        await vrchatClient.auth()
+        const response = await vrchatClient.friendsApi.friend(params.userId)
+        return {
+          content: [{
+            type: 'text',
+            text: JSON.stringify(response.data, null, 2)
+          }]
+        }
+      } catch (error) {
+        return {
+          content: [{
+            type: 'text',
+            text: 'Failed to send friend request: ' + error
+          }]
+        }
+      }
+    }
+  )
+
+  server.tool(
+    // Name
     'vrchat_get_friends_list',
     // Description
     `Retrieve a list of VRChat friend information. The following information can be retrieved:
