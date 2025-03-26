@@ -35,16 +35,16 @@ export const createFriendsTools = (server: McpServer, vrchatClient: VRChatClient
     },
     async (params) => {
       try {
+        await vrchatClient.auth()
         const response = await vrchatClient.friendsApi.getFriends(
           params.offset || 0,
           params.n || 10,
           params.offline || false,
         )
-        const friends = response.data
         return {
           content: [{
             type: 'text',
-            text: JSON.stringify(friends, null, 2)
+            text: JSON.stringify(response.data, null, 2)
           }]
         }
       } catch (error) {
