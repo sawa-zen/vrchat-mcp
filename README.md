@@ -118,7 +118,7 @@ This is a list of endpoints from the VRChat API that our Model Context Protocol 
 
 ### Instance Related
 - [x] Create instance
-- [ ] Get instance info
+- [x] Get instance info
 - [ ] Get instance attendees
 - [ ] Get instance short name
 - [ ] Join instance

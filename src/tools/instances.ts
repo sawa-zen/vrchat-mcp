@@ -5,6 +5,36 @@ import { z } from 'zod'
 export const createInstancesTools = (server: McpServer, vrchatClient: VRChatClient) => {
   server.tool(
     // Name
+    'vrchat_get_instance',
+    // Description
+    'Get information about a specific instance.',
+    {
+      worldId: z.string().describe('Must be a valid world ID.'),
+      instanceId: z.string().describe('Must be a valid instance ID.'),
+    },
+    async (params) => {
+      try {
+        await vrchatClient.auth()
+        const instance = await vrchatClient.instancesApi.getInstance(params.worldId, params.instanceId)
+        return {
+          content: [{
+            type: 'text',
+            text: JSON.stringify(instance.data, null, 2)
+          }]
+        }
+      } catch (error) {
+        return {
+          content: [{
+            type: 'text',
+            text: 'Failed to get instance: ' + error
+          }]
+        }
+      }
+    }
+  )
+
+  server.tool(
+    // Name
     'vrchat_create_instance',
     // Description
     'Create a new instance of a world.',
