@@ -6,6 +6,10 @@
 
 This project is a Model Context Protocol (MCP) server for interacting with the VRChat API. It allows you to retrieve various information from VRChat using a standardized protocol.
 
+<a href="https://youtu.be/0MRxhzlFCkw">
+  <img width="300" src="https://github.com/user-attachments/assets/85c00cc4-46b3-4f66-ab36-bf2891fdb283" alt="YouTube" />
+</a>
+
 <a href="https://glama.ai/mcp/servers/u763zoyi5a">
   <img width="380" height="200" src="https://glama.ai/mcp/servers/u763zoyi5a/badge" />
 </a>
