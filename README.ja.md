@@ -2,6 +2,8 @@
 
 ![eyecatch](./eyecatch.jpg)
 
+[![npm version](https://badge.fury.io/js/vrchat-mcp.svg)](https://badge.fury.io/js/vrchat-mcp) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 このプロジェクトは、VRChat APIと対話するためのModel Context Protocol (MCP)サーバーです。標準化されたプロトコルを使用してVRChatからさまざまな情報を取得することができます。
 
 <a href="https://glama.ai/mcp/servers/u763zoyi5a">
