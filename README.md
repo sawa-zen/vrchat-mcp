@@ -174,17 +174,23 @@ This is a list of endpoints from the VRChat API that our Model Context Protocol 
 - [ ] Get online users count
 - [ ] Get server announcements
 
+### Favorites
+- [x] List Favorites
+- [ ] Add Favorite
+- [ ] Remove Favorite
+- [ ] List Favorite Groups
+- [ ] Show Favorite Group
+- [ ] Update Favorite Group
+- [ ] Clear Favorite Group
+- [ ] Get Favorite Limits
+
 ### Others
 - [ ] Get tags list
-- [ ] Get favorite info
 - [ ] Get invisibles list
 - [ ] Get moderations
-- [ ] Get favorite groups
 - [ ] Get favorite group types
 - [ ] Create moderation
 - [ ] Delete moderation
-- [ ] Update favorite group
-- [ ] Update favorite group type
 
 ## Debugging
 
