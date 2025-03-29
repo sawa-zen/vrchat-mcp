@@ -178,7 +178,7 @@ This is a list of endpoints from the VRChat API that our Model Context Protocol 
 - [x] List Favorites
 - [ ] Add Favorite
 - [ ] Remove Favorite
-- [ ] List Favorite Groups
+- [x] List Favorite Groups
 - [ ] Show Favorite Group
 - [ ] Update Favorite Group
 - [ ] Clear Favorite Group
