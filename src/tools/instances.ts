@@ -7,7 +7,7 @@ export const createInstancesTools = (server: McpServer, vrchatClient: VRChatClie
     // Name
     'vrchat_get_instance',
     // Description
-    'Get information about a specific instance.',
+    'Get information about a specific instance. Note: Detailed information about instance members is only available if you are the instance owner.',
     {
       worldId: z.string().describe('Must be a valid world ID.'),
       instanceId: z.string().describe('Must be a valid instance ID.'),
