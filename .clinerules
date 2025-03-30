@@ -15,7 +15,7 @@ The user is a frontend engineer. They can code better than you, but due to time 
 - Since this is an OSS project, all documentation including README should be written in English.
 - When implementing new tools:
   - Update the package version (minor version for new features)
-  - Update both README.md and README.ja.md to reflect the new supported features
+  - Update README.md, README.ja.md, and README.ko.md to reflect the new supported features
   - Update version in both package.json and src/main.ts to match the new version
 
 ## Reference Information for Implementation
