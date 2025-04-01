@@ -184,6 +184,13 @@ This is a list of endpoints from the VRChat API that our Model Context Protocol 
 - [ ] Clear Favorite Group
 - [ ] Get Favorite Limits
 
+### Invites
+- [x] List Invite Messages
+- [x] Request Invite
+- [ ] Send Invite
+- [x] Get Invite Message
+- [ ] Update Invite Message
+
 ### Others
 - [ ] Get tags list
 - [ ] Get invisibles list
