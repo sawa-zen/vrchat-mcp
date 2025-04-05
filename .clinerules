@@ -23,3 +23,37 @@ The user is a frontend engineer. They can code better than you, but due to time 
 - VRChat SDK: https://github.com/vrchatapi/vrchatapi-javascript?tab=readme-ov-file
 - VRChat API Documentation: https://vrchatapi.github.io/docs/api/
 - modelcontextprotocol/sdk: https://github.com/modelcontextprotocol/typescript-sdk
+
+## VRChat Tag Specifications
+
+Tags in VRChat are used to grant access, assign restrictions, or attach metadata to various objects such as worlds, users, and avatars. Here are the key specifications:
+
+### Tag Format
+- Tags are simple strings grouped in a string array
+- Tags are commonly prefixed with a namespace designating the type of tag
+- Format: `namespace_type:value`
+
+### Tag Types
+1. Admin Tags
+   - Start with `admin_`
+   - Assigned manually by staff members
+   - Example: `admin_moderator`
+
+2. System Tags
+   - Start with `system_`
+   - Automatically assigned by the system
+   - Example: `system_trust_basic`
+
+### Tag Usage
+- Tags can be used to:
+  - Grant access to features
+  - Assign restrictions
+  - Add metadata to objects
+  - Define user roles and permissions
+  - Mark system status and properties
+
+### Implementation Notes
+- When working with tags, always validate the tag format
+- Consider tag namespaces when implementing tag-related features
+- Handle both admin and system tags appropriately
+- Be aware that some tags may affect user permissions and access levels

@@ -20,7 +20,7 @@ export class VRChatClient {
   inviteApi: InviteApi
   constructor({ username, password, potpSecret, email }: Arguments) {
     this._axiosConfiguration = axios.create({
-      headers: { 'User-Agent': `vrc-mcp/0.10 ${email}` },
+      headers: { 'User-Agent': `vrc-mcp/0.11.0 ${email}` },
     })
     this._vrchatConfiguration = new Configuration({ username, password })
     this._totpSecret = potpSecret
