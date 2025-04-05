@@ -22,7 +22,7 @@ const vrchatClient = new VRChatClient({
 
 const server = new McpServer({
   name: 'vrchat-mcp',
-  version: '0.10.0'
+  version: '0.11.0'
 })
 
 createUsersTools(server, vrchatClient)
