@@ -110,7 +110,7 @@ This is a list of endpoints from the VRChat API that our Model Context Protocol 
 - [ ] Get worlds list
 - [ ] Get active worlds
 - [ ] Get recently visited worlds
-- [ ] Get favorite worlds
+- [x] Get favorite worlds
 - [x] Search worlds
 - [ ] Get specific world details
 - [ ] Get world instances
