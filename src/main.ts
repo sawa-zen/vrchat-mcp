@@ -11,6 +11,7 @@ import { createInstancesTools } from './tools/instances.js'
 import { createGroupsTools } from './tools/groups.js'
 import { createFavoritesTools } from './tools/favorites.js'
 import { createInvitesTools } from './tools/invites.js'
+import { createNotificationsTools } from './tools/notifications.js'
 dotenv.config()
 
 const vrchatClient = new VRChatClient({
@@ -22,7 +23,7 @@ const vrchatClient = new VRChatClient({
 
 const server = new McpServer({
   name: 'vrchat-mcp',
-  version: '0.12.0'
+  version: '0.13.0'
 })
 
 createUsersTools(server, vrchatClient)
@@ -33,6 +34,7 @@ createInstancesTools(server, vrchatClient)
 createGroupsTools(server, vrchatClient)
 createFavoritesTools(server, vrchatClient)
 createInvitesTools(server, vrchatClient)
+createNotificationsTools(server, vrchatClient)
 
 // Start MCP server
 const transport = new StdioServerTransport()

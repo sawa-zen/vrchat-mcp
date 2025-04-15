@@ -155,7 +155,7 @@ This is a list of endpoints from the VRChat API that our Model Context Protocol 
 - [ ] Unban user from group
 
 ### Notification Related
-- [ ] Get notifications list
+- [x] Get notifications list
 - [ ] Get friend requests
 - [ ] Get unread notification count
 - [ ] Mark notification as read
