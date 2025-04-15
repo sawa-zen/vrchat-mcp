@@ -2,6 +2,7 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import dotenv from 'dotenv'
+import pkg from '../package.json' assert { type: 'json' }
 import { VRChatClient } from './VRChatClient.js'
 import { createFriendsTools } from './tools/friends.js'
 import { createUsersTools } from './tools/users.js'
@@ -23,7 +24,7 @@ const vrchatClient = new VRChatClient({
 
 const server = new McpServer({
   name: 'vrchat-mcp',
-  version: '0.13.0'
+  version: pkg.version
 })
 
 createUsersTools(server, vrchatClient)

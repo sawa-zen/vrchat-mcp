@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { Configuration, AuthenticationApi, FriendsApi, AvatarsApi, WorldsApi, InstancesApi, GroupsApi, FavoritesApi, InviteApi, NotificationsApi } from 'vrchat'
 import { authenticator } from 'otplib'
+import pkg from '../package.json' assert { type: 'json' }
 
 interface Arguments {
   username: string;
@@ -21,7 +22,7 @@ export class VRChatClient {
   notificationsApi: NotificationsApi
   constructor({ username, password, potpSecret, email }: Arguments) {
     this._axiosConfiguration = axios.create({
-      headers: { 'User-Agent': `vrc-mcp/0.13.0 ${email}` },
+      headers: { 'User-Agent': `vrc-mcp/${pkg.version} ${email}` },
     })
     this._vrchatConfiguration = new Configuration({ username, password })
     this._totpSecret = potpSecret
