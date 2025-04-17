@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { Configuration, AuthenticationApi, FriendsApi, AvatarsApi, WorldsApi, InstancesApi, GroupsApi, FavoritesApi, InviteApi, NotificationsApi } from 'vrchat'
 import { authenticator } from 'otplib'
-import pkg from '../package.json' assert { type: 'json' }
 
 interface Arguments {
   username: string;
