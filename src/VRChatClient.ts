@@ -22,7 +22,7 @@ export class VRChatClient {
   notificationsApi: NotificationsApi
   constructor({ username, password, potpSecret, email }: Arguments) {
     this._axiosConfiguration = axios.create({
-      headers: { 'User-Agent': `vrc-mcp/${pkg.version} ${email}` },
+      headers: { 'User-Agent': `vrc-mcp/0.14.1 ${email}` },
     })
     this._vrchatConfiguration = new Configuration({ username, password })
     this._totpSecret = potpSecret
