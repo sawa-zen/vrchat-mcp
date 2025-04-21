@@ -71,133 +71,42 @@ To use this MCP server with Claude Desktop, you do not need to run `npx vrchat-m
 
 Then, start Claude Desktop as usual. If you have to use nodenv or nvm, you may need to specify the full path to the `npx` command.
 
-## VRChat API Endpoints
+## Available Tools
 
-This is a list of endpoints from the VRChat API that our Model Context Protocol server supports or plans to support. Both GET and POST methods are included to provide comprehensive functionality. The checkboxes indicate the implementation status of each endpoint.
+This Model Context Protocol server provides the following VRChat-related tools:
 
-### Authentication and User Information
-- [x] Get current user info
-- [ ] Search users
-- [ ] Get specific user profile
-- [ ] Get user groups
-- [ ] Get player moderations
-- [ ] Get user status
-- [ ] Update user info
-- [ ] Update user status
-- [ ] Block user
-- [ ] Unblock user
-
-### Friend Related
-- [x] Get friends list
-- [ ] Get online friends
-- [x] Send friend request
-- [ ] Accept/Deny friend request
-- [ ] Remove friend
+### User Related
+- vrchat_get_friends_list: Get a list of friends
+- vrchat_send_friend_request: Send a friend request
 
 ### Avatar Related
-- [ ] Get own avatars
-- [ ] Get favorite avatars
-- [x] Search avatars
-- [ ] Get specific avatar details
-- [ ] Get public avatars
-- [ ] Create avatar
-- [ ] Update avatar
-- [ ] Delete avatar
-- [x] Select avatar
-- [ ] Favorite/Unfavorite avatar
+- vrchat_search_avatars: Search for avatars
+- vrchat_select_avatar: Select and switch to a specific avatar
 
 ### World Related
-- [ ] Get worlds list
-- [ ] Get active worlds
-- [ ] Get recently visited worlds
-- [x] Get favorite worlds
-- [x] Search worlds
-- [ ] Get specific world details
-- [ ] Get world instances
-- [ ] Get public worlds
-- [ ] Create world
-- [ ] Update world
-- [ ] Delete world
-- [ ] Favorite/Unfavorite world
+- vrchat_search_worlds: Search for worlds
+- vrchat_list_favorited_worlds: Get a list of favorited worlds
 
 ### Instance Related
-- [x] Create instance
-- [x] Get instance info
-- [ ] Get instance attendees
-- [ ] Get instance short name
-- [ ] Join instance
-- [ ] Leave instance
-- [ ] Invite user to instance
-
-### File Related
-- [ ] Get file info
-- [ ] Get file download info
-- [ ] Get file status
+- vrchat_create_instance: Create a new instance
+- vrchat_get_instance: Get information about a specific instance
 
 ### Group Related
-- [x] Search groups
-- [ ] Get specific group info
-- [ ] Get group members
-- [ ] Get group permissions
-- [ ] Get group requests
-- [ ] Get group invites
-- [ ] Get group bans
-- [ ] Get group galleries
-- [ ] Get group owned worlds
-- [ ] Create group
-- [ ] Update group
-- [ ] Delete group
-- [x] Join group
-- [ ] Leave group
-- [ ] Invite user to group
-- [ ] Accept/Deny group invite
-- [ ] Ban user from group
-- [ ] Unban user from group
+- vrchat_search_groups: Search for groups
+- vrchat_join_group: Join a group
+
+### Favorites Related
+- vrchat_list_favorites: Get a list of favorites
+- vrchat_add_favorite: Add a new favorite
+- vrchat_list_favorite_groups: Get a list of favorite groups
+
+### Invite Related
+- vrchat_list_invite_messages: Get a list of invite messages
+- vrchat_request_invite: Request an invite
+- vrchat_get_invite_message: Get a specific invite message
 
 ### Notification Related
-- [x] Get notifications list
-- [ ] Get friend requests
-- [ ] Get unread notification count
-- [ ] Mark notification as read
-- [ ] Delete notification
-- [ ] Clear all notifications
-
-### Inventory Related
-- [ ] Get license types
-- [ ] Get owned licenses
-- [ ] Get stores list
-
-### System Related
-- [ ] Get API configuration
-- [ ] Get API limits
-- [ ] Check system health
-- [ ] Get online users count
-- [ ] Get server announcements
-
-### Favorites
-- [x] List Favorites
-- [x] Add Favorite
-- [ ] Remove Favorite
-- [x] List Favorite Groups
-- [ ] Show Favorite Group
-- [ ] Update Favorite Group
-- [ ] Clear Favorite Group
-- [ ] Get Favorite Limits
-
-### Invites
-- [x] List Invite Messages
-- [x] Request Invite
-- [ ] Send Invite
-- [x] Get Invite Message
-- [ ] Update Invite Message
-
-### Others
-- [ ] Get tags list
-- [ ] Get invisibles list
-- [ ] Get moderations
-- [ ] Get favorite group types
-- [ ] Create moderation
-- [ ] Delete moderation
+- vrchat_get_notifications: Get a list of notifications
 
 ## Debugging
 
