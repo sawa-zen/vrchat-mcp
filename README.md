@@ -139,19 +139,7 @@ To publish a new version of the package, follow these steps:
    git pull origin main
    ```
 
-2. Update the version as needed
-   ```bash
-   # For patch version updates (e.g., 0.1.2 → 0.1.3)
-   npm version patch
-
-   # For minor version updates (e.g., 0.1.2 → 0.2.0)
-   npm version minor
-
-   # For major version updates (e.g., 0.1.2 → 1.0.0)
-   npm version major
-   ```
-
-3. Build the package
+2. Build the package
    ```bash
    npm run build
    ```

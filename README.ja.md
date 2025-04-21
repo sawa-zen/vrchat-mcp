@@ -137,19 +137,7 @@ npx @modelcontextprotocol/inspector "./dist/main.js"
    git pull origin main
    ```
 
-2. 必要に応じてバージョンを更新する
-   ```bash
-   # パッチバージョンの更新（例：0.1.2 → 0.1.3）
-   npm version patch
-
-   # マイナーバージョンの更新（例：0.1.2 → 0.2.0）
-   npm version minor
-
-   # メジャーバージョンの更新（例：0.1.2 → 1.0.0）
-   npm version major
-   ```
-
-3. ビルドを実行する
+2. ビルドを実行する
    ```bash
    npm run build
    ```

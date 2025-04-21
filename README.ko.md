@@ -137,19 +137,7 @@ npx @modelcontextprotocol/inspector "./dist/main.js"
    git pull origin main
    ```
 
-2. 필요에 따라 버전 업데이트
-   ```bash
-   # 패치 버전 업데이트 (예: 0.1.2 → 0.1.3)
-   npm version patch
-
-   # 마이너 버전 업데이트 (예: 0.1.2 → 0.2.0)
-   npm version minor
-
-   # 메이저 버전 업데이트 (예: 0.1.2 → 1.0.0)
-   npm version major
-   ```
-
-3. 빌드 실행
+2. 빌드 실행
    ```bash
    npm run build
    ```
