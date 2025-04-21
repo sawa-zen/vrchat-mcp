@@ -8,6 +8,10 @@
   <img width="300" src="https://github.com/user-attachments/assets/85c00cc4-46b3-4f66-ab36-bf2891fdb283" alt="YouTube" />
 </a>
 
+<a href="https://glama.ai/mcp/servers/u763zoyi5a">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/u763zoyi5a/badge" />
+</a>
+
 ## 개요
 
 VRChat MCP 서버는 VRChat의 API 엔드포인트에 구조화된 방식으로 접근할 수 있는 방법을 제공합니다. 사용자 인증, 사용자 및 친구 정보 검색, 아바타 및 월드 데이터 접근 등 다양한 기능을 지원합니다.
