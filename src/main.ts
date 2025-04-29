@@ -18,12 +18,12 @@ const vrchatClient = new VRChatClient({
   username: process.env.VRCHAT_USERNAME || '',
   password: process.env.VRCHAT_PASSWORD || '',
   potpSecret: process.env.VRCHAT_TOTP_SECRET || '',
-  email: process.env.VRCHAT_EMAIL || ''
+  authToken: process.env.VRCHAT_AUTH_TOKEN || '',
 })
 
 const server = new McpServer({
   name: 'vrchat-mcp',
-  version: '0.14.2',
+  version: '0.15.0',
 })
 
 createUsersTools(server, vrchatClient)

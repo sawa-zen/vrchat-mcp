@@ -22,18 +22,19 @@ VRChat MCP 서버는 VRChat의 API 엔드포인트에 구조화된 방식으로 
 
 ```bash
 export VRCHAT_USERNAME=your_username
-export VRCHAT_PASSWORD=your_password
-export VRCHAT_TOTP_SECRET=your_totp_secret
-export VRCHAT_EMAIL=your_email@example.com
+export VRCHAT_AUTH_TOKEN=your_auth_token
 ```
 
 > [!NOTE]
-> #### TOTP 시크릿 얻기
-> 1. [VRChat 프로필](https://vrchat.com/home/profile)에 접속하여 2단계 인증을 활성화합니다.
-> 2. 표시된 QR 코드를 디코딩하여 `otpauth://totp/VRChat:your@email.com?secret=XXXXXXXXXXXXXXXXXXX&issuer=VRChat`와 같은 문자열을 얻습니다.
-> 3. `XXXXXXXXXXXXXXXXXXX` 부분을 TOTP 시크릿으로 사용합니다.
+> #### AUTH TOKEN 얻는 방법
 >
-> **이 방법은 보안상의 우려가 있을 수 있으므로 신중하게 진행하세요.**
+> 다음 명령으로 간단히 로그인할 수 있습니다:
+> ```
+> npx vrchat-auth-token-checker
+> ```
+> [명령어 소스 코드](https://github.com/sawa-zen/vrchat-auth-token-checker)
+>
+> **얻은 토큰은 수명이 매우 길기 때문에 신중하게 다루세요**
 
 그런 다음 다음 명령을 실행합니다:
 
@@ -58,9 +59,7 @@ npx vrchat-mcp
       "args": ["vrchat-mcp"],
       "env": {
         "VRCHAT_USERNAME": "your-username",
-        "VRCHAT_PASSWORD": "your-password",
-        "VRCHAT_TOTP_SECRET": "your-totp-secret",
-        "VRCHAT_EMAIL": "your-email@example.com"
+        "VRCHAT_AUTH_TOKEN": "your-auth-token"
       }
     }
   }

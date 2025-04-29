@@ -4,9 +4,9 @@ import { authenticator } from 'otplib'
 
 interface Arguments {
   username: string;
-  password: string;
-  potpSecret: string;
-  email: string;
+  password?: string;
+  potpSecret?: string;
+  authToken?: string;
 }
 
 export class VRChatClient {
@@ -19,10 +19,17 @@ export class VRChatClient {
   favoritesApi: FavoritesApi
   inviteApi: InviteApi
   notificationsApi: NotificationsApi
-  constructor({ username, password, potpSecret, email }: Arguments) {
+  constructor({ username, password, potpSecret, authToken }: Arguments) {
     this._axiosConfiguration = axios.create({
-      headers: { 'User-Agent': `vrc-mcp/0.14.2 ${email}` },
+      headers: {
+        'User-Agent': `vrc-mcp/0.15.0 ${username}`,
+        ...(authToken ? {
+          'Cookie': `auth=${authToken}`
+        } : {})
+      },
     })
+    if (authToken) this._authed = true
+
     this._vrchatConfiguration = new Configuration({ username, password })
     this._totpSecret = potpSecret
 
@@ -58,12 +65,15 @@ export class VRChatClient {
   }
 
   // Private
-  private _totpSecret: string
+  private _totpSecret?: string
   private _axiosConfiguration
   private _vrchatConfiguration
   private _authed = false
 
   private async _verify2FA() {
+    if (!this._totpSecret) {
+      throw new Error('2FA secret not provided')
+    }
     const totpCode = authenticator.generate(this._totpSecret)
     const response = await this.authApi.verify2FA({ code: totpCode })
     if (!response.data.verified) {
