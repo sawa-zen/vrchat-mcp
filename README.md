@@ -24,18 +24,19 @@ To start the server, ensure you have the necessary environment variables set:
 
 ```bash
 export VRCHAT_USERNAME=your_username
-export VRCHAT_PASSWORD=your_password
-export VRCHAT_TOTP_SECRET=your_totp_secret
-export VRCHAT_EMAIL=your_email@example.com
+export VRCHAT_AUTH_TOKEN=your_auth_token
 ```
 
 > [!NOTE]
-> #### Obtain your TOTP secret
-> 1. Visit the [VRChat Profile](https://vrchat.com/home/profile) and enable Two-factor authentication.
-> 2. Decode the displayed QR code to get a string like `otpauth://totp/VRChat:your@email.com?secret=XXXXXXXXXXXXXXXXXXX&issuer=VRChat`.
-> 3. Use the `XXXXXXXXXXXXXXXXXXX` part as your TOTP secret.
+> #### How to obtain AUTH TOKEN
 >
-> **This method may have security concerns, so proceed with caution.**
+> You can use the following command for a simple login:
+> ```
+> npx vrchat-auth-token-checker
+> ```
+> [Command source code](https://github.com/sawa-zen/vrchat-auth-token-checker)
+>
+> **Please handle the obtained token with care as it has a very long lifetime**
 
 Then, run the following command:
 
@@ -60,9 +61,7 @@ To use this MCP server with Claude Desktop, you do not need to run `npx vrchat-m
       "args": ["vrchat-mcp"],
       "env": {
         "VRCHAT_USERNAME": "your-username",
-        "VRCHAT_PASSWORD": "your-password",
-        "VRCHAT_TOTP_SECRET": "your-totp-secret",
-        "VRCHAT_EMAIL": "your-email@example.com"
+        "VRCHAT_AUTH_TOKEN": "your-auth-token"
       }
     }
   }

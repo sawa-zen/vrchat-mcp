@@ -22,18 +22,19 @@ VRChat MCPサーバーは、VRChatのAPIエンドポイントに構造化され�
 
 ```bash
 export VRCHAT_USERNAME=your_username
-export VRCHAT_PASSWORD=your_password
-export VRCHAT_TOTP_SECRET=your_totp_secret
-export VRCHAT_EMAIL=your_email@example.com
+export VRCHAT_AUTH_TOKEN=your_auth_token
 ```
 
 > [!NOTE]
-> #### TOTPシークレットの取得方法
-> 1. [VRChatプロフィール](https://vrchat.com/home/profile)にアクセスし、二要素認証を有効にします。
-> 2. 表示されたQRコードをデコードして、`otpauth://totp/VRChat:your@email.com?secret=XXXXXXXXXXXXXXXXXXX&issuer=VRChat`のような文字列を取得します。
-> 3. `XXXXXXXXXXXXXXXXXXX`の部分をTOTPシークレットとして使用します。
+> #### AUTH TOKEN の取得方法
 >
-> **このメソッドにはセキュリティ上の懸念がある可能性があるため、慎重に進めてください。**
+> 以下のコマンドで簡易ログインができます。
+> ```
+> npx vrchat-auth-token-checker
+> ```
+> [コマンドのソースコード](https://github.com/sawa-zen/vrchat-auth-token-checker)
+>
+> **取得したトークンのライフタイムは非常に長いため慎重に扱ってください**
 
 その後、以下のコマンドを実行します：
 
@@ -45,7 +46,7 @@ npx vrchat-mcp
 
 ## Claude Desktopでの使用方法
 
-このMCPサーバーをClaude Desktopで使用する場合、`npx vrchat-mcp`を手動で実行する必要はありません。代わりに、Claude Desktopの設定ファイルに以下の設定を追加してください：
+Claude Desktopを起動する前に設定ファイルに以下の設定を追加してください。設定ファイルの json の場所は各OS以下のようになっています。
 
 - MacOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
@@ -58,16 +59,14 @@ npx vrchat-mcp
       "args": ["vrchat-mcp"],
       "env": {
         "VRCHAT_USERNAME": "your-username",
-        "VRCHAT_PASSWORD": "your-password",
-        "VRCHAT_TOTP_SECRET": "your-totp-secret",
-        "VRCHAT_EMAIL": "your-email@example.com"
+        "VRCHAT_AUTH_TOKEN": "your-auth-token"
       }
     }
   }
 }
 ```
 
-その後、通常通りClaude Desktopを起動してください。nodenvやnvmを使用している場合は、`npx`コマンドのフルパスを指定する必要があるかもしれません。
+その後 Claude Desktop を起動してください。nodenvやnvmを使用している場合は、`npx`コマンドのフルパスを指定する必要があるかもしれません。
 
 ## 使用可能ツール
 
