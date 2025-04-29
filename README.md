@@ -30,9 +30,18 @@ export VRCHAT_AUTH_TOKEN=your_auth_token
 > [!NOTE]
 > #### How to obtain AUTH TOKEN
 >
-> You can use the following command for a simple login:
+> You can use the following command to login and obtain an auth token:
 > ```
-> npx vrchat-auth-token-checker
+> $ npx vrchat-auth-token-checker
+>
+> VRChat Username: your-username
+> Password: ********
+>
+> # If 2FA is enabled
+> 2FA Code: 123456
+>
+> # Success output
+> Auth Token: authcookie-xxxxx
 > ```
 > [Command source code](https://github.com/sawa-zen/vrchat-auth-token-checker)
 >

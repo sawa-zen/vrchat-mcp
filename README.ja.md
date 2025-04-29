@@ -28,9 +28,18 @@ export VRCHAT_AUTH_TOKEN=your_auth_token
 > [!NOTE]
 > #### AUTH TOKEN の取得方法
 >
-> 以下のコマンドで簡易ログインができます。
+> 以下のコマンドで簡易ログインができ、authトークンを取得できます：
 > ```
-> npx vrchat-auth-token-checker
+> $ npx vrchat-auth-token-checker
+>
+> VRChat Username: your-username
+> Password: ********
+>
+> # If 2FA is enabled
+> 2FA Code: 123456
+>
+> # Success output
+> Auth Token: authcookie-xxxxx
 > ```
 > [コマンドのソースコード](https://github.com/sawa-zen/vrchat-auth-token-checker)
 >
