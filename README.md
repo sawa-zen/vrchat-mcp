@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/sawa-zen-vrchat-mcp-badge.png)](https://mseep.ai/app/sawa-zen-vrchat-mcp)
+
 ![VRChat MCP](./eyecatch.jpg)
 
 [![npm version](https://badge.fury.io/js/vrchat-mcp.svg)](https://badge.fury.io/js/vrchat-mcp) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
